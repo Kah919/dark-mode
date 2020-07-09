@@ -1,11 +1,26 @@
 body {
+    --accentcolor: orangered;
+    --background-color: white;
+    --text-color: black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    margin: 0;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
 }
 
 body.dark {
+    --accentcolor: #D0D066;
+    --background-color: #333;
+    --text-color: white;
 
 }
