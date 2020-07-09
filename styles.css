@@ -64,12 +64,17 @@ body.dark {
     top: 0;
     height: 200vmin;
     pointer-events: none;
-    transform: rotate(var(--rotation));
+    transform: rotate(calc(var(--rotation) * 1deg));
+    transition: transform var(--transition-delay);
 }
 
 .sun,
 .moon {
- position: absolute;
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    width: 30px;
+    height: 30px;
+    fill: var(--accent-color);
 }
 
 .sun {
@@ -78,4 +83,14 @@ body.dark {
 
 .moon {
     bottom: 5%;
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+.dark .moon {
+    opacity: 1;
+}
+
+.dark .sun {
+    opacity: 0;
 }
