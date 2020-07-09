@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-
+    transition: var(--transition-delay);
     background-color: var(--background-color);
     color: var(--text-color);
 
@@ -28,6 +28,10 @@ body.dark {
 .title {
     margin: 0;
     margin-bottom: .5rem;
+}
+
+.theme-toggle-button .icon {
+    margin-right: .5em;
 }
 
 .theme-toggle-button {
@@ -49,4 +53,8 @@ body.dark {
 .theme-toggle-button:hover,
 .theme-toggle-button:focus {
     transform: scale(1.1);
+}
+
+.sun-moon-container {
+    position: absolute;
 }
